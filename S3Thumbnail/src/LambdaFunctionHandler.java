@@ -24,8 +24,7 @@ import com.amazonaws.util.json.JSONObject;
 
 public class LambdaFunctionHandler<E> implements RequestHandler<S3Event, Object> {
 
-    @SuppressWarnings("unchecked")
-	@Override
+    @Override
     public Object handleRequest(S3Event input, Context context) {
         context.getLogger().log("Input: " + input.toJson().toString() + "\n");
         JSONArray recordArray;
